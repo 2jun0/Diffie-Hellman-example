@@ -24,6 +24,7 @@ def get_random_int(nbytes: int) -> int:
   # random_int = 00011010
   # 00011010 | 10000000  =>  10011010
   random_int |= 1 << (int(nbytes/8) - 1)
+  return random_int
 
 def get_random_odd_int(nbytes: int) -> int:
   random_int = get_random_int(nbytes)
